@@ -330,9 +330,26 @@
     npm i stylus-loader -S
     ```
 
+19. vue轮播插件 vue-awesome-swiper
+
+    [github地址](https://github.com/surmon-china/vue-awesome-swiper)
+
+20. 通过css来对图片未加载时用灰色背景div占位。ie盒模型时content+padding+border；当内容溢出到padding也是可以的。所以overflow:hidden不会影响到padding里的内容
+
+    ```
+    //#可以给wrapper添加一下css特性
+    overflow:hidden;
+    width:100%;
+    height:0;
+    padding-bottom:30%;
+    background:#eee
+    ----------
+    或者直接写
+    width:100%
+    height:30vw
+    ```
+
     
-
-
 
 
 
