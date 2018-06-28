@@ -5,6 +5,11 @@ import App from './App'
 import './assets/styles/reset.css'
 import './assets/styles/border.css'
 import fastClick from 'fastclick'
+import './assets/styles/iconfont'
+
+
+
+
 
 Vue.config.productionTip = false
 
@@ -15,3 +20,4 @@ new Vue({
   store,
   render: h => h(App)
 }).$mount('#app')
+
