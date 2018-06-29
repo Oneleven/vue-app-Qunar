@@ -26,7 +26,7 @@ export default {
 </script>
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
-<!-- 1rem = html font-sice = 50px -->
+<!-- 1rem = html font-size = 50px -->
 <style scoped lang="stylus">
 @import '../assets/styles/global.styl'
 .header 
