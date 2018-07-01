@@ -11,7 +11,7 @@
         <use xlink:href="#icon-sousuo"></use>
       </svg>
       输入城市/景点/游玩主题</div>
-    <div class="header-right">城市
+    <div class="header-right">{{ city }}
       <svg class="icon icon-jiantou" aria-hidden="true">
         <use xlink:href="#icon-jiantou"></use>
       </svg>
@@ -21,7 +21,10 @@
 
 <script>
 export default {
-  name: "HomeHeader"
+  name: "HomeHeader",
+  props:{
+    city:String
+  }
 };
 </script>
 

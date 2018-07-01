@@ -366,9 +366,19 @@
     }
     ```
 
+22. 通过axios来发送ajax请求`npm i axios -S`
+
+    在主入口Home组件中去发送ajax请求
+
+    ```
+    import axios from 'axios'
+    ---并在生命周期函数中的mounted中发送
+    mounted(){
+        
+    }
+    ```
+
     
-
-
 
 
 
