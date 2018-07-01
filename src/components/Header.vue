@@ -2,7 +2,7 @@
   <div class="header">
     <div class="header-left ">
       <svg class="icon icon-fanhui" aria-hidden="true">
-        <use xlink:href="#icon-fanhui"></use>
+        <use xlink:href="#icon-arrow-left-copy"></use>
       </svg>
     </div>
  
@@ -11,11 +11,13 @@
         <use xlink:href="#icon-sousuo"></use>
       </svg>
       输入城市/景点/游玩主题</div>
-    <div class="header-right">{{ city }}
-      <svg class="icon icon-jiantou" aria-hidden="true">
-        <use xlink:href="#icon-jiantou"></use>
-      </svg>
-    </div>
+    <router-link to="/city">
+      <div class="header-right">{{ city }}
+        <svg class="icon icon-jiantou" aria-hidden="true">
+         <use xlink:href="#icon-jiantou"></use>
+       </svg>
+      </div>
+    </router-link>
   </div>
 </template>
 
@@ -61,9 +63,11 @@ export default {
   .header-right 
     width: 1.24rem;
     text-align: center;
+    color: #FFFFFF;
     .icon-jiantou
       font-size: .24rem
       margin-left:-0.04rem
+      color: #FFFFFF;
 
 
 .icon 
