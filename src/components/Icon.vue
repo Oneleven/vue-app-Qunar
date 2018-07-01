@@ -86,17 +86,18 @@
     .icons >>> swiper-container
         margin:0   
     .icons
-        height 44vw
+        height 48vw
         padding-top 2.5vw
-        padding-bottom 1vw
+        // padding-bottom 1vw
         .icon-wrapper
             display flex
-            flex-wrap wrap   
+            flex-wrap wrap 
         .icon
             width 25vw
             height 22vw
             .icon-img 
-                padding-bottom:0.12rem
+                // padding-bottom:0.12rem
+                height 60px
                 width 100%
                 display flex
                 justify-content center

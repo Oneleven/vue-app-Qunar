@@ -349,6 +349,23 @@
     height:30vw
     ```
 
+21. 把一个数组a[1,2,3,4,5,6,7,8,9]分成2个数组，并且内容最多8个
+
+    ```
+    var a = [1,2,3,4,5,6,7,8,9]
+    function newarray(){
+        var newarray = []
+        a.forEach((item,index)=>{
+            var page = Math.floor(index/8)
+            if(!newarray[page]){
+                newarray[page]=[]
+            }
+            newarray[page].push(item)
+        })
+        return newarray
+    }
+    ```
+
     
 
 

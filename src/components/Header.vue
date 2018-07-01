@@ -29,6 +29,7 @@ export default {
 <!-- 1rem = html font-size = 50px -->
 <style scoped lang="stylus">
 @import '../assets/styles/global.styl'
+@import '../assets/styles/mixin.styl'
 .header 
   display: flex;
   line-height: 0.86rem;
@@ -63,9 +64,5 @@ export default {
 
 
 .icon 
-  width: 1em;
-  height: 1em;
-  vertical-align: -0.15em;
-  fill: currentColor;
-  overflow: hidden;
+  iconfontStyle()
 </style>
