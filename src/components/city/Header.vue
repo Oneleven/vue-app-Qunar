@@ -1,5 +1,5 @@
 <template>
-    <div>
+    <div class="wrapper">
         <header>
             <div class="title">
                 <p>城市选择</p>
@@ -9,14 +9,58 @@
                     </svg>
                 </router-link>
             </div>
-            <input type="text" class="search" placeholder="输入城市名或拼音"/>
+            <input type="text" class="search" v-model="keyword" placeholder="输入城市名或拼音"/>
         </header>
+        <div class="search-content" v-show="keyword">
+                <ul>
+                    <li class="search-item" v-for="item of list" :key="item.id"> {{item.name}}</li>
+                    <li class="search-item" v-show="!list.length">没有找到匹配的城市&gt;.&lt;! </li>
+                </ul>
+        </div>
     </div>
 </template>
 
 <script>
     export default {
-        name:'cityHeader'
+        name:'cityHeader',
+        props:{
+           cities: Object
+        },
+        data(){
+            return {
+                keyword:'',
+                list:[],
+                timer:null,  //截流，定义一个xxms的计时器
+                showCity:111
+            }
+        },
+        watch:{
+            keyword(){
+                // this.showCity = false
+                if(this.timer){
+                    clearTimeout(this.timer)
+                }
+                if(!this.keyword){
+                    this.list = []
+                    this.showCity = true
+                }else{
+                    this.showCity = false
+                }
+
+                this.$emit('change',this.showCity)
+                this.timer = setTimeout(()=>{
+                    const result = []
+                    for(let i in this.cities){
+                        this.cities[i].forEach((value)=>{
+                            if( value.spell.indexOf(this.keyword)>-1 || value.name.indexOf(this.keyword)>-1 ){
+                                result.push(value)
+                            }
+                        })
+                    }
+                    this.list = result
+                },20)
+            }
+        }
     }
 </script>
 
@@ -24,6 +68,22 @@
 @import '../../assets/styles/global.styl'
 @import '../../assets/styles/mixin.styl'
 
+.wrapper
+    position relative
+.search-content
+    right 0
+    left 0
+    bottom 0
+    position absolute 
+    background-color #eeeeee
+    height calc(100vh - 1.66rem)
+    top 1.66rem
+    .search-item
+        line-height .62rem
+        padding-left .2rem
+        color #616161
+        background-color #ffffff
+        border-bottom 1px solid #E1E1E1
 header 
     height 1.46rem
     background-color $bgColor
@@ -49,7 +109,7 @@ header
         text-align center
         margin-right rem
         border-radius .06rem
-        padding 0 .1rem
+        padding 0 .2rem
 
 .icon 
   iconfontStyle()
