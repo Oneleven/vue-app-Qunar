@@ -12,7 +12,7 @@
       </svg>
       输入城市/景点/游玩主题</div>
     <router-link to="/city">
-      <div class="header-right">{{ city }}
+      <div class="header-right">{{ this.city }}
         <svg class="icon icon-jiantou" aria-hidden="true">
          <use xlink:href="#icon-jiantou"></use>
        </svg>
@@ -22,10 +22,16 @@
 </template>
 
 <script>
+
+import { mapState } from 'vuex'
+
 export default {
   name: "HomeHeader",
-  props:{
-    city:String
+  // props:{
+  //   city:String
+  // }
+  computed:{
+    ...mapState(['city'])
   }
 };
 </script>
@@ -61,7 +67,8 @@ export default {
     padding-left 0.2rem
   
   .header-right 
-    width: 1.24rem;
+    padding-left .1rem
+    min-width: 1.24rem;
     text-align: center;
     color: #FFFFFF;
     .icon-jiantou

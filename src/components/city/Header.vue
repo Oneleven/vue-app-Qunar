@@ -13,7 +13,10 @@
         </header>
         <div class="search-content" v-show="keyword">
                 <ul>
-                    <li class="search-item" v-for="item of list" :key="item.id"> {{item.name}}</li>
+                    <li class="search-item" 
+                        v-for="item of list" 
+                        :key="item.id"
+                        @click="handleCityClick(item.name)">{{item.name}}</li>
                     <li class="search-item" v-show="!list.length">没有找到匹配的城市&gt;.&lt;! </li>
                 </ul>
         </div>
@@ -21,6 +24,7 @@
 </template>
 
 <script>
+import { mapMutations } from 'vuex'
     export default {
         name:'cityHeader',
         props:{
@@ -33,6 +37,15 @@
                 timer:null,  //截流，定义一个xxms的计时器
                 showCity:111
             }
+        },
+        methods:{
+            handleCityClick(city){
+                // this.$store.dispatch('changeCity',city)
+                // this.$store.commit('changeCity', city)
+                this.changeCity(city)
+                this.$router.push('/')  //也可以在页面中使用router-link标签来实现路由跳转
+            },
+            ...mapMutations(['changeCity'])
         },
         watch:{
             keyword(){

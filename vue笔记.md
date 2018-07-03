@@ -378,6 +378,26 @@
     }
     ```
 
+23. 块级元素平等分布在同一行，并且中间有1像素的border
+
+    ![](https://ws4.sinaimg.cn/large/006tNc79gy1fsvzyoncmvj30og06w0t0.jpg)
+
+    ```
+    在css中用calc()的计算方法,以及box-sizing:border-box ，以及:nth-child(3n-1)
+    <ul>
+     <li><a>北京</a></li>
+     <li><a>上海</a></li>
+     <li><a>西安</a></li>
+    </ul>
+    ```
+
+24. vue的路由
+
+    ```
+    1. 可以使用<router-link to='/xxx'>标签来实现路由跳转
+    2. 也可以调用this.$router.push('/xxx') 来实现页面跳转
+    ```
+
     
 
 

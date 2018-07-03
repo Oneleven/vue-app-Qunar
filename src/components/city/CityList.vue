@@ -3,13 +3,15 @@
         <section>
             <h2 class="title position">您的位置</h2>
             <nav class="current-location">
-                <a>上海</a>
+                <a> {{this.city}} </a>
             </nav>
         </section>
         <section>
             <h2 class="title">热门城市</h2>
             <ul class="hot-city-list content">
-                <li v-for="item of hot" :key=item.id >
+                <li v-for="item of hot" 
+                    :key=item.id 
+                    @click="handleCityClick(item.name)">
                     <a>{{ item.name }}</a>
                 </li>
             </ul>
@@ -26,7 +28,9 @@
             <div v-for="(value,key,index) of cities" :key=key>
                 <h2 class="title" :id='name[index]'>{{ key }}</h2>
                 <ul class="content-list">
-                    <li v-for="item of value" :key=item.id>
+                    <li v-for="item of value" 
+                        :key=item.id
+                        @click="handleCityClick(item.name)">
                         <a>{{ item.name }}</a>
                     </li>
                 </ul>
@@ -36,12 +40,22 @@
 </template>
 
 <script>
+import { mapState, mapMutations } from 'vuex'
     export default {
         name:'cityList',
         props:{
             cities:Object,
             hot:Array,
             location:Array
+        },
+        methods:{
+            handleCityClick(city){
+                // this.$store.dispatch('changeCity',city)
+                // this.$store.commit('changeCity', city)
+                this.changeCity(city)
+                this.$router.push('/')
+            },
+            ...mapMutations(['changeCity'])
         },
         computed:{
             name(){
@@ -50,7 +64,8 @@
                     names.push(name.url)
                 }
                 return names
-            }
+            },
+            ...mapState(['city'])
         }
     }
 </script>
