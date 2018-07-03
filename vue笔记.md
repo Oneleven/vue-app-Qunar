@@ -334,6 +334,26 @@
 
     [github地址](https://github.com/surmon-china/vue-awesome-swiper)
 
+    ⚠️配置轮播不同的配置选项 [awiper](http://3.swiper.com.cn/api/index.html) , 可以在data中定义
+
+    ```
+    swiperOption:{
+                        pagination: '.swiper-pagination',
+                        paginationType:'fraction'
+                    }
+    ```
+
+    ⚠️当改变swiper的样式（例如隐藏/显示）或者修改swiper的子元素时，需要自动初始化swiper，否则会有bug，需要以下配置
+
+    ```
+     swiperOption:{
+                        observeParents:true,
+                        observer:true
+                    }                    
+    ```
+
+    
+
 20. 通过css来对图片未加载时用灰色背景div占位。ie盒模型时content+padding+border；当内容溢出到padding也是可以的。所以overflow:hidden不会影响到padding里的内容
 
     ```
@@ -396,6 +416,17 @@
     ```
     1. 可以使用<router-link to='/xxx'>标签来实现路由跳转
     2. 也可以调用this.$router.push('/xxx') 来实现页面跳转
+    ```
+
+25. css中块级元素绝对定位并且撑满整个画布
+
+    ```
+    position:fixed;
+    left:0;
+    bottom:0;
+    top:0;
+    right:0;
+    background-color:#666   撑满了整个画布
     ```
 
     

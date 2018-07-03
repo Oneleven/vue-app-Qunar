@@ -7,7 +7,10 @@
             <span>猜你喜欢</span>
         </div>
         <ul>
-            <li class="item" v-for="item of list" :key=item.id> 
+            <router-link class="item" v-for="item of list" 
+                :key=item.id
+                tag ="li"
+                :to="'/detail' + item.id"> 
                 <div class="item-left">
                     <img :src=item.imgUrl :alt=item.itemName />
                     <p>随买随用</p>
@@ -29,7 +32,7 @@
                         </div>
                     </div>
                 </div>
-            </li>
+            </router-link>
         </ul>
     </div>
 </template>
