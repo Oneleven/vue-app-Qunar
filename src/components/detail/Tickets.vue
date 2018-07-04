@@ -1,5 +1,5 @@
 <template>
-<div>
+<div id='text'>
     <div class= 'tickets-wrapper'>
         <h3>
             <span></span>成人票
@@ -29,6 +29,8 @@
 </script>
 
 <style scoped lang='stylus'>
+#text
+    height 80rem
     .tickets-wrapper
         height 2.74rem
         border-top .2rem solid #F5F5F5

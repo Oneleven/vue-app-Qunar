@@ -51,7 +51,7 @@ import { mapMutations } from 'vuex'
         watch:{
             keyword(){
                 // this.showCity = false
-                const keyword = this.keyword.trim()
+                const keyword = this.keyword.trim().toLowerCase()
                 if(this.timer){
                     clearTimeout(this.timer)
                 }
