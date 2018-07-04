@@ -429,7 +429,7 @@
     background-color:#666   撑满了整个画布
     ```
 
-    
+26. 在vue组件中监听windows事件，比如window.addEventListener('scroll',xxx)，需要及时地解绑window.removeEventListener('scroll',xxx)，防止对整个页面产生负面影响
 
 
 

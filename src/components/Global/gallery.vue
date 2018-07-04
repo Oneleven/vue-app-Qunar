@@ -47,6 +47,7 @@
     .container >>> .swiper-container
         overflow inherit 
     .container
+        z-index 2
         background-color #212121
         position fixed 
         left 0
