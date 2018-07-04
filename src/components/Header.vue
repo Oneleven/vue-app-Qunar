@@ -7,10 +7,10 @@
     </div>
  
     <div class="header-input">
-      <svg class="icon" aria-hidden="true">
+      <svg class="icon icon-search" aria-hidden="true">
         <use xlink:href="#icon-sousuo"></use>
       </svg>
-      输入城市/景点/游玩主题</div>
+      <input type="text" placeholder="输入城市/景点/游玩主题"> </div>
     <router-link to="/city">
       <div class="header-right">{{ this.city }}
         <svg class="icon icon-jiantou" aria-hidden="true">
@@ -41,6 +41,10 @@ export default {
 <style scoped lang="stylus">
 @import '../assets/styles/global.styl'
 @import '../assets/styles/mixin.styl'
+input::-webkit-input-placeholder { /* WebKit browsers */  
+  color: #D0D0D0;  
+}  
+
 .header 
   display: flex;
   line-height: 0.86rem;
@@ -65,6 +69,11 @@ export default {
     border-radius: 0.1rem;
     color: #E5E7EA;
     padding-left 0.2rem
+    input
+      padding-left .1rem
+      line-height  0.6rem
+      width 80%
+      font-size  .28rem
   
   .header-right 
     padding-left .1rem
@@ -74,7 +83,7 @@ export default {
     .icon-jiantou
       font-size: .24rem
       margin-left:-0.04rem
-      color: #FFFFFF;
+      color: #FFFFFF
 
 
 .icon 

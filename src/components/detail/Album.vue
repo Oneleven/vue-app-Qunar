@@ -51,7 +51,6 @@ import Gallery from '../Global/gallery'
 
 <style scoped lang='stylus'>
     .album
-
         position relative
         img 
             width 100%

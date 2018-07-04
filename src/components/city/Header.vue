@@ -44,16 +44,18 @@ import { mapMutations } from 'vuex'
                 // this.$store.commit('changeCity', city)
                 this.changeCity(city)
                 this.$router.push('/')  //也可以在页面中使用router-link标签来实现路由跳转
+                this.keyword = ''
             },
             ...mapMutations(['changeCity'])
         },
         watch:{
             keyword(){
                 // this.showCity = false
+                const keyword = this.keyword.trim()
                 if(this.timer){
                     clearTimeout(this.timer)
                 }
-                if(!this.keyword){
+                if(!keyword){
                     this.list = []
                     this.showCity = true
                 }else{
@@ -65,7 +67,7 @@ import { mapMutations } from 'vuex'
                     const result = []
                     for(let i in this.cities){
                         this.cities[i].forEach((value)=>{
-                            if( value.spell.indexOf(this.keyword)>-1 || value.name.indexOf(this.keyword)>-1 ){
+                            if( value.spell.indexOf(keyword)>-1 || value.name.indexOf(keyword)>-1 ){
                                 result.push(value)
                             }
                         })
