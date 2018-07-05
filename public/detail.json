@@ -1,0 +1,275 @@
+{
+	"success": true,
+	"data": {
+		"sightname": {
+			"_0001": {
+				"name": "上海玛雅海滩水公园",
+				"score": 4.9,
+				"desc": "很棒",
+				"comment-bumber": 5079,
+				"location": "上海市松江区佘山镇林湖路888号佘山国家旅游度假区",
+				"recommend": [
+					"上海玛雅海滩水公园全日成人票",
+					"上海玛雅海滩水公园夜场票",
+					"上海玛雅海滩水公园儿童长者全日票"
+				],
+				"pictures": [
+					"http://img1.qunarzz.com/sight/p0/1506/30/7a528fae12c17e6e29d5d13a9d9813ee.water.jpg_350x240_53d5fff9.jpg",
+					"http://img1.qunarzz.com/sight/p0/1506/dd/7659217cc529114eba75b42ace21ca4a.water.jpg_350x240_e9624f11.jpg",
+					"http://img1.qunarzz.com/sight/p0/1506/38/0b27cc769af006603c07e1e742c219fb.water.jpg_350x240_cb929f40.jpg",
+					"http://img1.qunarzz.com/sight/p0/1506/ba/d25df17c5f6542e03695ba7b8bf766c4.water.jpg_350x240_293f24ad.jpg",
+					"http://img1.qunarzz.com/sight/p0/1506/b9/0d356b635e50475966043c05a7792798.water.jpg_350x240_46c3d66e.jpg",
+					"http://img1.qunarzz.com/sight/p0/1506/b9/0d356b635e50475966043c05a7792798.water.jpg_350x240_46c3d66e.jpg",
+					"http://img1.qunarzz.com/sight/p0/1506/bf/b6bcb119ffb7b88f29048c7251cd64ce.water.jpg_350x240_5fe0f79e.jpg",
+					"http://img1.qunarzz.com/sight/p0/1506/67/d849d56c591e320a8f87a86f33b72636.water.jpg_350x240_81a37c2d.jpg"
+				],
+				"tickets": {
+					"成人票": {
+						"上海玛雅海滩水公园全日成人票": [
+							{
+								"name": "上海玛雅海滩水公园全日成人票",
+								"price": 210,
+								"rule": "23:59前可订明日",
+								"attention": "同城旅游,预定须知"
+							},
+							{
+								"name": "【身份证入园，无需换票】上海玛雅海滩水公园成人全日票",
+								"price": 218,
+								"rule": "23:59前可订明日",
+								"attention": "鹿宝国际旅行,预定须知"
+							},
+							{
+								"name": "上海玛雅海滩睡公园成人全日票（刷身份证入园 无需取票",
+								"price": 209,
+								"rule": "22:30前可订明日",
+								"attention": "奇异果旅游票务,预定须知"
+							}
+						],
+						"上海玛雅海滩水公园夜场票": [
+							{
+								"name": "上海玛雅海滩水公园夜场票",
+								"price": 180,
+								"rule": "14:00前随买随用",
+								"attention": "去哪儿直销,预定须知"
+							},
+							{
+								"name": "上海玛雅海滩水公园成人夜场票",
+								"price": 180,
+								"rule": "14:00前随买随用",
+								"attention": "同城旅游,预定须知"
+							},
+							{
+								"name": "【刷身份证入园，无需换票】上海玛雅海滩水公园夜场票",
+								"price": 191.2,
+								"rule": "14:00前随买随用",
+								"attention": "鹿宝国际旅行,预定须知"
+							}
+						]
+					},
+					"儿童/老人票": {
+						"上海玛雅海滩水公园儿童长者全日票": [
+							{
+								"name": "上海玛雅海滩水公园儿童长者全日票",
+								"price": 140,
+								"rule": "可订7月7日",
+								"attention": "去哪儿直销,预定须知"
+							},
+							{
+								"name": "上海玛雅海滩水公园儿童全日票",
+								"price": 140,
+								"rule": "23:59前可订明日",
+								"attention": "同城旅游,预定须知"
+							},
+							{
+								"name": "【刷身份证入园，无需换票】上海玛雅海滩水公园儿童长者全日票",
+								"price": 140,
+								"rule": "23:59前可订明日",
+								"attention": "鹿宝国际旅行,预定须知"
+							}
+						]
+					},
+					"家庭票": {
+						"上海玛雅海滩水公园家庭套票（2大1小）": [
+							{
+								"name": "上海玛雅海滩水公园家庭全日票[2大1小]",
+								"price": 520,
+								"rule": "23:59前可订明日",
+								"attention": "同城旅游,预定须知"
+							},
+							{
+								"name": "上海玛雅海滩水公园家庭套票",
+								"price": 520,
+								"rule": "可定7月7日",
+								"attention": "去哪儿直销,预定须知"
+							}
+						]
+					}
+				}
+			},
+			"_0002": {
+				"name": "上海迪士尼乐园",
+				"score": 5.0,
+				"desc": "超赞",
+				"comment-bumber": 164419,
+				"location": "上海市浦东新区川沙新镇上海迪士尼度假区内",
+				"recommend": [
+					"3.5KM奇跑迪士尼参赛者专享乐园",
+					"5.0KM奇跑迪士尼参赛者专享乐园",
+					"上海迪士尼乐园8折成人票"
+				],
+				"pictures": [
+					"http://img1.qunarzz.com/sight/p0/1607/7c/7cda8b6782dabd80b4.img.jpg_350x240_a8e4d8a8.jpg",
+					"http://img1.qunarzz.com/sight/p0/1711/81/81ed632012f27eeaa3.img.jpg_350x240_6db86357.jpg",
+					"http://img1.qunarzz.com/sight/p0/1704/d2/d2a029bded2f6b4aa3.img.jpg_350x240_6ed8e68e.jpg",
+					"http://img1.qunarzz.com/sight/p0/1711/1e/1e5eaf5ac11a1dea3.img.jpg_350x240_1654220c.jpg",
+					"http://img1.qunarzz.com/sight/p0/1704/d7/d75e41fc3bf305d8a3.img.jpg_350x240_384ad477.jpg",
+					"http://img1.qunarzz.com/sight/p0/1711/e6/e6c63a841145702a3.img.jpg_350x240_d277a555.jpg",
+					"http://img1.qunarzz.com/sight/p0/1711/b6/b6dcb80ed40dedbfa3.img.jpg_350x240_7205d2a3.jpg",
+					"http://img1.qunarzz.com/sight/p0/1711/85/850efa63b8e01621a3.img.jpg_350x240_ad808e01.jpg"
+				],
+				"tickets": {
+					"奇跑迪士尼": {
+						"3.5KM奇跑迪士尼参赛者专享乐园": [
+							{
+								"name": "3.5KM奇跑迪士尼参赛者专享乐园",
+								"price": 732,
+								"rule": "可订9月15日",
+								"attention": "去哪儿直销,预定须知"
+							}
+						],
+						"5.0KM奇跑迪士尼参赛者专享乐园": [
+							{
+								"name": "5.0KM奇跑迪士尼参赛者专享乐园",
+								"price": 802.0,
+								"rule": "可订9月15日",
+								"attention": "去哪儿直销,预定须知"
+							}
+						]
+					},
+					"特惠票": {
+						"上海迪士尼乐园8折成人票": [
+							{
+								"name": "上海迪士尼乐园8折成人票",
+								"price": 460.0,
+								"rule": "可订明日",
+								"attention": "去哪儿直销,预定须知"
+							}
+						],
+						"上海迪士尼乐园8折儿童/老人票": [
+							{
+								"name": "上海迪士尼乐园8折儿童/老人票",
+								"price": 345.0,
+								"rule": "可订明日",
+								"attention": "去哪儿直销,预定须知"
+							}
+						]
+					},
+					"下午场": {
+						"【夏季平日下午场】上海迪士尼乐园成人票": [
+							{
+								"name": "上海迪士尼夜场星空票成人票（下午场15：00入园）",
+								"price": 280,
+								"rule": "16:00前可订今日",
+								"attention": "乐享家园,预定须知"
+							},
+							{
+								"name": "【夏季平日下午场】上海迪士尼乐园成人票",
+								"price": 300,
+								"rule": "22:00前随买随用",
+								"attention": "去哪儿直销,预定须知"
+							}
+						],
+						"【夏季平日下午场】上海迪士尼乐园老人儿童票": [
+							{
+								"name": "【夏季平日下午场】上海迪士尼乐园老人、儿童票",
+								"price": 239,
+								"rule": "22:00前随买随用",
+								"attention": "去哪儿直销,预定须知"
+							}
+						]
+					}
+				}
+			},
+			"_0003": {
+				"name": "上海欢乐谷（AAAA景区)",
+				"score": 4.9,
+				"desc": "很棒",
+				"comment-bumber": 27743,
+				"location": "上海市松江区佘山镇林湖路888号",
+				"recommend": [
+					"上海欢乐谷日场成人票 刷身份证入园",
+					"【7月6日特惠】上海欢乐谷成人票",
+					"上海欢乐谷成人全日票（电子票）快速发码"
+				],
+				"pictures": [
+					"http://img1.qunarzz.com/sight/p0/1803/1a/1aac2b1dd96b36ba3.water.jpg_350x240_7e24c83d.jpg",
+					"http://img1.qunarzz.com/sight/p0/1803/5e/5e5cf1907207dd16a3.water.jpg_350x240_b0b1639d.jpg",
+					"http://img1.qunarzz.com/sight/p0/1803/b0/b0e8dff00c973855a3.water.jpg_350x240_ecf15e5b.jpg",
+					"http://img1.qunarzz.com/sight/p0/1803/14/1404071056aeec4da3.water.jpg_350x240_c9476b21.jpg",
+					"http://img1.qunarzz.com/sight/p0/1803/99/997267e601497ed1a3.water.jpg_350x240_ed5abd97.jpg",
+					"http://img1.qunarzz.com/sight/p0/1802/23/23f9b76f18e2a419a3.water.jpg_350x240_82c98a97.jpg",
+					"http://img1.qunarzz.com/sight/p0/1802/ed/ed72888fae17fa4ca3.water.jpg_350x240_7a9efcbd.jpg",
+					"http://img1.qunarzz.com/sight/p0/1706/75/75a47ebc77fd0f03a3.img.jpg_350x240_1e28a773.jpg"
+				],
+				"tickets": {
+					"限时抢购票": {
+						"欢乐谷盛夏特惠成人票": [
+							{
+								"name": "上海欢乐谷日场成人票 刷身份证入园",
+								"price": 185,
+								"rule": "22:30前可订明日",
+								"attention": "奇异果旅游票务,预定须知"
+							}
+						]
+					},
+					"特惠票": {
+						"【7月6日特惠】上海欢乐谷成人票": [
+							{
+								"name": "【7月6日特惠】上海欢乐谷成人票",
+								"price": 160,
+								"rule": "23:59前可订明日",
+								"attention": "去哪儿直销,预定须知"
+							}
+						]
+					},
+					"学生票": {
+						"上海欢乐谷大学生全日票": [
+							{
+								"name": "上海欢乐谷大学生全日票【无需取票 直接刷身份证入园】",
+								"price": 180,
+								"rule": "可订7月7日",
+								"attention": "去哪儿直销,预定须知"
+							},
+							{
+								"name": "上海欢乐谷全日大学生票",
+								"price": 180,
+								"rule": "可订7月7日",
+								"attention": "蓝精灵,预定须知"
+							},
+							{
+								"name": "上海欢乐谷大学生票",
+								"price": 180.9,
+								"rule": "可订7月7日",
+								"attention": "驴妈妈旅游网,预定须知"
+							}
+						],
+						"上海欢乐谷中高考生特惠票": [
+							{
+								"name": "上海欢乐谷中高考生优惠票",
+								"price": 180,
+								"rule": "可订7月7日",
+								"attention": "去哪儿直销,预定须知"
+							},
+							{
+								"name": "上海欢乐谷中高考生特惠票",
+								"price": 180.9,
+								"rule": "可订7月7日",
+								"attention": "票票券,预定须知"
+							}
+						]
+					}
+				}
+			}
+		}
+	}
+}

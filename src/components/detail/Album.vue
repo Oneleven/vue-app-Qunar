@@ -8,7 +8,7 @@
                 </svg>
             </router-link> -->
             <div class="wrapper">
-                <p>上海玛雅海滩水公园</p>
+                <p v-if="project"> {{project.name}} </p>
                 <div class="img-info">
                     <svg class="icon" aria-hidden="true">
                         <use xlink:href="#icon-tupian"></use>
@@ -26,8 +26,20 @@
 
 <script>
 import Gallery from '../Global/gallery'
+// import fn from '../Global/computed'
+
     export default {
         name:'Album',
+        props:{
+            sightname:Object
+        },
+        computed:{
+            project(){
+                var number = this.$route.params.id
+                var obj = this.sightname[number]
+                return obj
+            }
+        },
         components:{
             Gallery
         },

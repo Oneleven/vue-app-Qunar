@@ -11,12 +11,14 @@
         <div class="header" 
              v-show="!showIcon"
              :style="opactiy">
-            <div class="header-left ">
+            <router-link tag="div" 
+                         class="header-left"
+                         to="/">
                 <svg class="icon icon-fanhui" aria-hidden="true">
                     <use xlink:href="#icon-arrow-left-copy"></use>
                 </svg>
-            </div>
-            <p>上海玛雅海滩水公园</p>
+            </router-link>
+            <p v-if="project">{{project.name}}</p>
         </div>
     </div>
 </template>
@@ -24,6 +26,16 @@
 <script>
 export default {
   name: "Banner",
+  props:{
+    sightname:Object
+  },
+  computed:{
+      project(){
+                var number = this.$route.params.id
+                var obj = this.sightname[number]
+                return obj
+            }
+        },
   data(){
       return{
           showIcon:true,
