@@ -1,8 +1,8 @@
 <template>
     <div>
         <detail-album :sightname="sightname" ></detail-album>     
-        <detail-introduction></detail-introduction>
-        <detail-recommend></detail-recommend>
+        <detail-introduction :sightname="sightname"></detail-introduction>
+        <detail-recommend :sightname="sightname"></detail-recommend>
         <detail-tickets></detail-tickets>
         <detail-banner :sightname="sightname" ></detail-banner>
     </div>

@@ -1,8 +1,8 @@
 <template>
-    <div class="container" @click="handleGalleryClick">
+    <div class="container" @click="handleGalleryClick" v-if="this.picturesList">
         <div class="wrapper">
             <swiper  :options="swiperOption">
-                <swiper-slide v-for="(item, index) of imgs" :key=index>
+                <swiper-slide v-for="(item, index) of this.pictures" :key=index>
                     <img class="swiper-img"  :src=item />
                 </swiper-slide>
                 <div class="swiper-pagination"  slot="pagination"></div>
@@ -14,12 +14,10 @@
 <script>
     export default {
         name:'Gallery',
-        props:{
-            imgs:{
-                type:Array,
-                default(){
-                    return []
-                }
+        props:["picturesList"],
+        computed:{
+            pictures(){
+                return this.picturesList.pictures
             }
         },
         data(){
@@ -29,7 +27,8 @@
                     paginationType:'fraction',
                     observeParents:true,
                     observer:true
-                }
+                },
+                heihei:this.picturesList
             }
         },
         methods:{

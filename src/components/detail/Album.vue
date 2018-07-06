@@ -1,25 +1,27 @@
 <template>
-    <div>
+    <div v-if="project">
+        <!-- 能够访问到嵌套的json数据 -->
         <div class="album" @click="handleShowClick">
-            <img src="//img1.qunarzz.com/sight/p0/1506/30/7a528fae12c17e6e29d5d13a9d9813ee.water.jpg_600x330_866232e3.jpg" alt=""/>
+            <img :src="project.pictures[0]"/>
             <!-- <router-link tag="div" class="return" to="/">
                 <svg class="icon icon-fanhui fanhui" aria-hidden="true">
                     <use xlink:href="#icon-arrow-left-copy"></use>
                 </svg>
             </router-link> -->
             <div class="wrapper">
-                <p v-if="project"> {{project.name}} </p>
+                <p> {{project.name}} </p>
                 <div class="img-info">
                     <svg class="icon" aria-hidden="true">
                         <use xlink:href="#icon-tupian"></use>
                     </svg>
-                    <span>32</span>
+                    <span>{{project.pictures.length}}</span>
                 </div>
             </div>
         </div>
         <gallery :imgs="imgs" 
                  v-show="showGallery"
                  @hidden="galleryHidden"
+                 :picturesList="this.project"
         ></gallery>
     </div>
 </template>

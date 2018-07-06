@@ -431,6 +431,8 @@
 
 26. 在vue组件中监听windows事件，比如window.addEventListener('scroll',xxx)，需要及时地解绑window.removeEventListener('scroll',xxx)，防止对整个页面产生负面影响
 
+27. 父组件在mounted中获取ajax数据请求后，传递给子组件。如果json数据是嵌套的，比如a.b.c ，那么在标签页加入一个判断`v-if="a.b"` , 只有在a.b存在的情况下再展示渲染页面。否则出错
+
 
 
 

@@ -1,11 +1,11 @@
 <template>
     <div>
-        <div class="wrapper">
+        <div class="wrapper" v-if="datas">
             <div class="brief">
                 <div class="score-container">
                     <div class="score-left">
-                        <p class="score"><span>4.9</span><span>分</span> <span> 很棒</span></p>
-                        <p class="content"> <span>5079条评论</span> <span>3条攻略</span></p>
+                        <p class="score"><span>{{datas.score}}</span><span>分</span> <span> {{datas.desc}}</span></p>
+                        <p class="content"> <span>{{datas.number}}条评论</span> <span>{{datas.guides}}条攻略</span></p>
                         <svg class="icon" aria-hidden="true">
                             <use xlink:href="#icon-jiantou-copy"></use>
                         </svg>
@@ -23,7 +23,7 @@
                 <svg class="icon-location" aria-hidden="true">
                             <use xlink:href="#icon-location"></use>
                 </svg>
-                <p>上海市松江区佘山镇林湖路888号佘山国家旅游度假区</p>
+                <p>{{datas.location}}</p>
                 <svg class="icon" aria-hidden="true">
                             <use xlink:href="#icon-jiantou-copy"></use>
                 </svg>
@@ -34,7 +34,17 @@
 
 <script>
     export default {
-        name:"Introduction"
+        name:"Introduction",
+        props:{
+            sightname:Object
+        },
+        computed:{
+            datas(){
+                var number = this.$route.params.id
+                var obj = this.sightname[number]
+                return obj
+            }
+        }
     }
 </script>
 

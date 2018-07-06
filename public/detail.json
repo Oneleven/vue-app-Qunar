@@ -6,7 +6,8 @@
 				"name": "上海玛雅海滩水公园",
 				"score": 4.9,
 				"desc": "很棒",
-				"comment-bumber": 5079,
+				"number": 5079,
+				"guides":3,
 				"location": "上海市松江区佘山镇林湖路888号佘山国家旅游度假区",
 				"recommend": [
 					"上海玛雅海滩水公园全日成人票",
@@ -110,7 +111,8 @@
 				"name": "上海迪士尼乐园",
 				"score": 5.0,
 				"desc": "超赞",
-				"comment-bumber": 164419,
+				"number": 164419,
+				"guides":31,
 				"location": "上海市浦东新区川沙新镇上海迪士尼度假区内",
 				"recommend": [
 					"3.5KM奇跑迪士尼参赛者专享乐园",
@@ -194,7 +196,8 @@
 				"name": "上海欢乐谷（AAAA景区)",
 				"score": 4.9,
 				"desc": "很棒",
-				"comment-bumber": 27743,
+				"number": 27743,
+				"guides":13,
 				"location": "上海市松江区佘山镇林湖路888号",
 				"recommend": [
 					"上海欢乐谷日场成人票 刷身份证入园",
