@@ -1,18 +1,12 @@
 <template>
-<div id='text'>
-    <div class= 'tickets-wrapper'>
+<div id='text' v-if="project">
+    <div class='tickets-wrapper' v-for="(value,key,index) of this.$store.getters.maindatas.ticketsObject" :key=key>
         <h3>
-            <span></span>成人票
+            <span></span>{{key}}
         </h3>
         <div class="content">
-            <p>上海玛雅海滩水公园成人全日票</p>
-            <div class="price"> <span>¥</span> <span>209</span> <span>起</span></div>
-            <svg class="icon" aria-hidden="true">
-                <use xlink:href="#icon-jiantou1-copy"></use>
-            </svg>
-        </div>
-        <div class="content">
-            <p>上海玛雅海滩水公园成人全日票</p>
+            <!-- <p>{{  Object.keys(Object.values(ticketsname)).slice(index,1)  }}</p> -->
+            <p>{{  Object.keys(ticketsname[index])[index]  }}</p>
             <div class="price"> <span>¥</span> <span>209</span> <span>起</span></div>
             <svg class="icon" aria-hidden="true">
                 <use xlink:href="#icon-jiantou1-copy"></use>
@@ -24,7 +18,24 @@
 
 <script>
     export default {
-        name:'Tickets'
+        name:'Tickets',
+        props:{
+            sightname:Object
+        },
+        computed:{
+            project(){
+                var number = this.$route.params.id
+                var obj = this.sightname[number]
+                return obj
+            },
+            ticketsname(){
+                var number = this.$route.params.id
+                var obj = this.sightname[number]
+                var value= Object.values(obj.tickets)
+                let name = Object.keys(value)
+                return value
+            }
+        }
     }
 </script>
 

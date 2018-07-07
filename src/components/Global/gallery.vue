@@ -1,8 +1,8 @@
 <template>
-    <div class="container" @click="handleGalleryClick" v-if="this.picturesList">
+    <div class="container" @click="handleGalleryClick">
         <div class="wrapper">
             <swiper  :options="swiperOption">
-                <swiper-slide v-for="(item, index) of this.pictures" :key=index>
+                <swiper-slide v-for="(item, index) of this.$store.getters.maindatas.singlePlay.pictures" :key=index>
                     <img class="swiper-img"  :src=item />
                 </swiper-slide>
                 <div class="swiper-pagination"  slot="pagination"></div>
@@ -14,7 +14,6 @@
 <script>
     export default {
         name:'Gallery',
-        props:["picturesList"],
         computed:{
             pictures(){
                 return this.picturesList.pictures

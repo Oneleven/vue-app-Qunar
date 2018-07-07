@@ -18,7 +18,7 @@
                     <use xlink:href="#icon-arrow-left-copy"></use>
                 </svg>
             </router-link>
-            <p v-if="project">{{project.name}}</p>
+            <p v-if="project">{{this.$store.getters.maindatas.singlePlay.name}}</p>
         </div>
     </div>
 </template>

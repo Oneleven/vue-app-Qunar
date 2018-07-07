@@ -2,8 +2,8 @@
     <div class="recommend-wrapper">
         <div class="recommend-detail">
             <div class="detail-left">
-                <p class="ticket-name">{{item}}</p>
-                <p class="ticket-time"><img src="https://img1.qunarzz.com/piao/fusion/1804/25/792e9929973a9902.png" alt="clock">23:59钱可订明日</p>
+                <p class="ticket-name">{{item.name}}</p>
+                <p class="ticket-time"><img src="https://img1.qunarzz.com/piao/fusion/1804/25/792e9929973a9902.png" alt="clock">{{item.rule}}</p>
                 <ul>
                     <li><span><img src="https://img1.qunarzz.com/piao/fusion/1804/b0/c3cf2897c74ecc02.png" alt="logo">自营</span></li>
                     <li><span>无需换票</span></li>
@@ -11,7 +11,7 @@
                 </ul>
             </div>
             <div class="detail-right">
-                <p><span>¥</span> <span>210</span></p>
+                <p><span>¥</span> <span>{{item.price}}</span></p>
                 <button>预定</button>
             </div>
         </div>
@@ -21,12 +21,7 @@
 <script>
     export default {
         name:'ticket',
-        props:['message','item'],
-        // computed:{
-        //     recommend(){
-        //         return this.message.recommend
-        //     }
-        // }
+        props:['item'],
     }
 </script>
 

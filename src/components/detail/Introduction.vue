@@ -4,8 +4,8 @@
             <div class="brief">
                 <div class="score-container">
                     <div class="score-left">
-                        <p class="score"><span>{{datas.score}}</span><span>分</span> <span> {{datas.desc}}</span></p>
-                        <p class="content"> <span>{{datas.number}}条评论</span> <span>{{datas.guides}}条攻略</span></p>
+                        <p class="score"><span>{{this.$store.getters.maindatas.singlePlay.score}}</span><span>分</span> <span> {{this.$store.getters.maindatas.singlePlay.desc}}</span></p>
+                        <p class="content"> <span>{{this.$store.getters.maindatas.singlePlay.number}}条评论</span> <span>{{this.$store.getters.maindatas.singlePlay.guides}}条攻略</span></p>
                         <svg class="icon" aria-hidden="true">
                             <use xlink:href="#icon-jiantou-copy"></use>
                         </svg>
@@ -23,7 +23,7 @@
                 <svg class="icon-location" aria-hidden="true">
                             <use xlink:href="#icon-location"></use>
                 </svg>
-                <p>{{datas.location}}</p>
+                <p>{{this.$store.getters.maindatas.singlePlay.location}}</p>
                 <svg class="icon" aria-hidden="true">
                             <use xlink:href="#icon-jiantou-copy"></use>
                 </svg>

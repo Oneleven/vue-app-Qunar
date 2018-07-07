@@ -3,7 +3,7 @@
         <detail-album :sightname="sightname" ></detail-album>     
         <detail-introduction :sightname="sightname"></detail-introduction>
         <detail-recommend :sightname="sightname"></detail-recommend>
-        <detail-tickets></detail-tickets>
+        <detail-tickets :sightname="sightname"></detail-tickets>
         <detail-banner :sightname="sightname" ></detail-banner>
     </div>
 </template>
@@ -42,7 +42,10 @@ import axios from 'axios'
             getDetailSucc(val){
                 const data = val.data
                 if(data.success){
-                    this.sightname = data.data.sightname
+                    const value = data.data.sightname
+                    const mark = this.$route.params.id
+                    this.sightname = value
+                    this.$store.dispatch('getInfo',{value,mark})
                 }
             }
         },

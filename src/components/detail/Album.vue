@@ -9,17 +9,17 @@
                 </svg>
             </router-link> -->
             <div class="wrapper">
-                <p> {{project.name}} </p>
+                <!-- <p> {{project.name}} </p> -->
+                     <p> {{this.$store.getters.maindatas.singlePlay.name}} </p>
                 <div class="img-info">
                     <svg class="icon" aria-hidden="true">
                         <use xlink:href="#icon-tupian"></use>
                     </svg>
-                    <span>{{project.pictures.length}}</span>
+                    <span>{{this.$store.getters.maindatas.singlePlay.pictures.length}}</span>
                 </div>
             </div>
         </div>
-        <gallery :imgs="imgs" 
-                 v-show="showGallery"
+        <gallery v-show="showGallery"
                  @hidden="galleryHidden"
                  :picturesList="this.project"
         ></gallery>
@@ -48,8 +48,6 @@ import Gallery from '../Global/gallery'
         data(){
             return {
                 showGallery: false,
-                imgs:['http://img1.qunarzz.com/sight/p0/1506/30/7a528fae12c17e6e29d5d13a9d9813ee.water.jpg_r_800x800_47582402.jpg'
-                    ,'http://img1.qunarzz.com/sight/p0/1506/dd/7659217cc529114eba75b42ace21ca4a.water.jpg_r_800x800_9456bcaa.jpg']
             }
         },
         methods:{

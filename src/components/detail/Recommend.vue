@@ -6,9 +6,10 @@
             </svg>
             去哪儿推荐
         </h3>
-        <ticket :message="project"
-                v-for="(item,index) of project.recommend" :key="index"
-                :item="item"></ticket>
+        <ticket v-for="(item,index) of this.$store.getters.maindatas.ticketsRecommend" 
+                :item="item"
+                :key="index"
+                ></ticket>
        
     </div>
 </template>
