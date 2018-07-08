@@ -26,6 +26,7 @@
 import ticket from '../Global/mainticket'
 import siblings from '../Global/findSibling'
 
+
     export default {
         name:'Tickets',
         props:{
@@ -34,11 +35,6 @@ import siblings from '../Global/findSibling'
         components:{
             ticket
         },
-        // data(){
-        //     return {
-        //         showit: false
-        //     }
-        // },
         computed:{
             project(){
                 var number = this.$route.params.id
@@ -66,14 +62,6 @@ import siblings from '../Global/findSibling'
                         dom.style.transform = 'rotate(180deg)'
                     }  
                 }
-               
-                // if(a.getAttribute('display') === "none"){
-                //     a.removeAttribute('display')
-                // }else{
-                //     a.setAttribute('dispaly','none')
-                // }
-                
-                // this.showit = !this.showit
             }
         }
     }

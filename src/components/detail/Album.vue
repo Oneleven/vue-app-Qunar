@@ -19,16 +19,18 @@
                 </div>
             </div>
         </div>
+        <fade-animation>
         <gallery v-show="showGallery"
                  @hidden="galleryHidden"
                  :picturesList="this.project"
         ></gallery>
+        </fade-animation>
     </div>
 </template>
 
 <script>
 import Gallery from '../Global/gallery'
-// import fn from '../Global/computed'
+import FadeAnimation from '../Global/animation/Fade'
 
     export default {
         name:'Album',
@@ -43,7 +45,8 @@ import Gallery from '../Global/gallery'
             }
         },
         components:{
-            Gallery
+            Gallery,
+            FadeAnimation
         },
         data(){
             return {
