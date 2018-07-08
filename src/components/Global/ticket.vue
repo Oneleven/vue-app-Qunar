@@ -30,7 +30,7 @@
     border-top .2rem solid #F5F5F5
     .recommend-detail
             border-bottom $bottom-line
-            height 1.24rem
+            min-height 1.24rem
             display flex
             justify-content space-between
             padding .2rem
@@ -40,7 +40,7 @@
                 align-items center
                 justify-content center
                 p
-                    height .4rem
+                    min-height .4rem
                     color #ff9800
                     &>span:nth-child(1)
                         font-size: .24rem;
@@ -59,7 +59,8 @@
                 flex-direction column
                 height 100%
                 .ticket-name
-                    height .52rem
+                    // min-height .52rem
+                    padding-bottom .2rem
                     color: #616161
                     font-size: .3rem
                 .ticket-time 

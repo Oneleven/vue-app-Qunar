@@ -8,12 +8,10 @@
                     <li v-for="(value,index) of thirdValue.label" :key="index"><span ref="spanlogo">
                         <!-- <img src="https://img1.qunarzz.com/piao/fusion/1804/b0/c3cf2897c74ecc02.png" alt="logo" v-if="showImg"> -->
                         {{value}}</span></li>
-                    <!-- <li><span>无需换票</span></li>
-                    <li><span>条件退</span></li> -->
                 </ul>
                 <ul class="ticket-rule">
                     <li v-for="(value,index) of thirdValue.attention" :key=index> {{ value }} </li>
-                    <svg class="icon" aria-hidden="true">
+                    <svg class="icon-arrow" aria-hidden="true">
                             <use xlink:href="#icon-jiantou-copy"></use>
                     </svg>
                 </ul>
@@ -30,17 +28,6 @@
     export default {
         name:'mainticket',
         props:["thirdValue"],
-        // data(){
-        //     return {
-        //         showImg:false
-        //     }
-        // },
-        // mounted(){
-        //     const text = this.$refs.spanlogo.innerText
-        //     if(text.trim() === "自营"){
-        //         this.showImg = true
-        //     }
-        // }
     }
 </script>
 
@@ -79,9 +66,11 @@
                 height 100%
                 justify-content center
                 .ticket-name
+                    line-height .40rem
                     color: #616161
                     font-size: .3rem
                     padding-bottom .1rem
+                    padding-right .2rem
                 .ticket-time 
                     height .32rem
                     color: #616161
@@ -115,7 +104,7 @@
                         font-size: .24rem;
                         line-height: .34rem
                         margin-right .1rem 
-                    .icon   
+                    .icon-arrow                     
                         width .24rem
                         height .24rem
                         padding-top .03rem

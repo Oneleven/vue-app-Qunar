@@ -28,7 +28,7 @@ import axios from 'axios'
         data(){
             return{
                 sightname:{},
-                lastlocation:[]
+                lastlocation:''
             }
         },
         methods:{
@@ -50,13 +50,13 @@ import axios from 'axios'
             }
         },
         mounted(){
-            this.lastlocation.push(this.$route.params.id)
+            this.lastlocation = this.$route.params.id
             this.getDetailInfo()
         },
         activated(){
-            if(this.lastlocation.indexOf(this.$route.params.id) === -1){
+            if(this.$route.params.id !== this.lastlocation ){
                 this.getDetailInfo()
-                this.lastlocation.push(this.$route.params.id)
+                // this.lastlocation.push(this.$route.params.id)
             }
         }
     }

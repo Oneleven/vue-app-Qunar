@@ -96,7 +96,7 @@ import siblings from '../Global/findSibling'
             border-bottom 1px solid #F5F5F5
             p   
                 flex 1
-                padding .24rem 0
+                padding .24rem 0.2rem .24rem 0
                 color: #333;
                 font-size: .3rem;
                 line-height: .48rem
