@@ -1,39 +1,79 @@
 <template>
 <div id='text' v-if="project">
-    <div class='tickets-wrapper' v-for="(value,key,index) of this.$store.getters.maindatas.ticketsObject" :key=key>
+    <div class='tickets-wrapper' v-for="(value,key,index) of this.$store.getters.maindatas.ticketsObject" :key=index>
         <h3>
             <span></span>{{key}}
         </h3>
-        <div class="content">
-            <!-- <p>{{  Object.keys(Object.values(ticketsname)).slice(index,1)  }}</p> -->
-            <p>{{  Object.keys(ticketsname[index])[index]  }}</p>
-            <div class="price"> <span>¥</span> <span>209</span> <span>起</span></div>
-            <svg class="icon" aria-hidden="true">
-                <use xlink:href="#icon-jiantou1-copy"></use>
-            </svg>
+        <div v-for="(mainValue, mainKey, mainIndex) of value"
+             :key=mainIndex
+             @click="showDetailTickets($event)">
+            <div class="content">
+                <p>{{mainKey}}</p>
+                <div class="price"> <span>¥</span> <span>{{ mainValue[0].price }}</span> <span>起</span></div>
+                <svg class="icon" aria-hidden="true">
+                    <use xlink:href="#icon-jiantou1-copy"></use>
+                </svg>
+            </div>
+            <ticket v-for ="(thirdValue,thirdIndex) of mainValue" :key="thirdIndex"
+                    :thirdValue="thirdValue"
+                    class="ticket"></ticket>
         </div>
     </div>
 </div>
 </template>
 
 <script>
+import ticket from '../Global/mainticket'
+import siblings from '../Global/findSibling'
+
     export default {
         name:'Tickets',
         props:{
             sightname:Object
         },
+        components:{
+            ticket
+        },
+        // data(){
+        //     return {
+        //         showit: false
+        //     }
+        // },
         computed:{
             project(){
                 var number = this.$route.params.id
                 var obj = this.sightname[number]
                 return obj
-            },
-            ticketsname(){
-                var number = this.$route.params.id
-                var obj = this.sightname[number]
-                var value= Object.values(obj.tickets)
-                let name = Object.keys(value)
-                return value
+            }
+        },
+        methods:{
+            showDetailTickets(e){
+                const current = e.currentTarget
+                const tickets = current.getElementsByClassName('ticket')
+                for(let dom of tickets){
+                    if(dom.style.display==='block'){
+                        dom.style.display = 'none'
+                    }else{
+                        dom.style.display = 'block'
+                    }  
+                }
+
+                const icons = current.getElementsByClassName('icon')
+                for(let dom of icons){
+                    if(dom.style.transform ==='rotate(180deg)'){
+                        dom.style.transform = 'rotate(0deg)'
+                    }else{
+                        dom.style.transform = 'rotate(180deg)'
+                    }  
+                }
+               
+                // if(a.getAttribute('display') === "none"){
+                //     a.removeAttribute('display')
+                // }else{
+                //     a.setAttribute('dispaly','none')
+                // }
+                
+                // this.showit = !this.showit
             }
         }
     }
@@ -43,7 +83,7 @@
 #text
     height 80rem
     .tickets-wrapper
-        height 2.74rem
+        // height 2.74rem
         border-top .2rem solid #F5F5F5
         h3 
             line-height .88rem
@@ -62,7 +102,7 @@
         .content
             position relative
             display flex
-            height .96rem
+            min-height .96rem
             padding 0 .2rem
             align-items  center
             border-bottom 1px solid #F5F5F5
@@ -89,4 +129,10 @@
                 height .4rem
                 right .2rem
                 fill #9e9e9e
+                transform rotate(0deg)
+        .ticket 
+            display none
+            border-top 1px solid #dadada
+            background-color #F5F5F5
+            margin-top -1px 
 </style>

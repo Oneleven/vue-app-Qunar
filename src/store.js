@@ -5,10 +5,20 @@ import Vuex from 'vuex'
 Vue.use(Vuex)
 
 
+let defaultCity = '上海'
+try{
+  if(localStorage.city){
+    defaultCity = localStorage.city
+  }
+}catch(e){
+  console.log(e)
+}
+
 
 export default new Vuex.Store({
   state: {
-    detail:{}
+    detail:{},
+    city:defaultCity
   },
 
   actions:{
@@ -20,6 +30,14 @@ export default new Vuex.Store({
   mutations:{
     changeDetail(state, val){
       state.detail = val
+    },
+      changeCity(state, city){
+      state.city = city
+      try{
+        localStorage.city = city
+      }catch(e){
+        console.log(e)
+      }   
     }
   },
 
