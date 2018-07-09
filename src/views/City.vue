@@ -42,13 +42,11 @@
                 }
             },
             handleChange(val){
-                console.log(val)
                 this.cityshow = val
             }
         },
         mounted(){
             this.getCityInfo()
-            console.log(this.cityshow)
         }
     }
 </script>

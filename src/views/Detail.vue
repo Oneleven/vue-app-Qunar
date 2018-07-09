@@ -46,6 +46,7 @@ import axios from 'axios'
                     const mark = this.$route.params.id
                     this.sightname = value
                     this.$store.dispatch('getInfo',{value,mark})
+                    // this.lastlocation = this.$route.params.id
                 }
             }
         },
@@ -54,8 +55,9 @@ import axios from 'axios'
             this.getDetailInfo()
         },
         activated(){
-            if(this.$route.params.id !== this.lastlocation ){
+            if( this.lastlocation !== this.$route.params.id ){
                 this.getDetailInfo()
+                this.lastlocation = this.$route.params.id
                 // this.lastlocation.push(this.$route.params.id)
             }
         }
