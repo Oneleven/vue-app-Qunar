@@ -33,7 +33,7 @@ import axios from 'axios'
         },
         methods:{
             getDetailInfo(){
-                axios.get('/static/detail.json',{
+                axios.get('./static/detail.json',{
                     params:{
                         id:this.$route.params.id
                     }

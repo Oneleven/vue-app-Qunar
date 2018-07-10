@@ -42,7 +42,7 @@ export default {
   },
   methods:{
     getHomeInfo(){
-      axios.get('/static/index.json?city=' + this.city).then(
+      axios.get('./static/index.json?city=' + this.city).then(
         this.getHomeInfoSucc
       )
     },

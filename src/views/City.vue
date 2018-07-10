@@ -29,7 +29,7 @@
         },
         methods:{
             getCityInfo(){
-                axios.get('/static/city.json').then(
+                axios.get('./static/city.json').then(
                     this.getCityInfoSucc
                 )
             },
