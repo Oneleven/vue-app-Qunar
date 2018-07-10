@@ -69,23 +69,6 @@ import FadeAnimation from '../Global/animation/Fade'
         position relative
         img 
             width 100%
-        // .return
-        //     width .72rem
-        //     height .72rem
-        //     position absolute 
-        //     left .1rem
-        //     top .1rem
-        //     background-color rgba(0,0,0,0.70)
-        //     border-radius 50%
-        //     display flex
-        //     justify-content center
-        //     align-items center
-        //     .fanhui
-        //         width .54rem
-        //         height .54rem
-        //         fill #ffffff
-        //         display flex
-        //         padding-right .05rem
         .wrapper
             width 100%
             position absolute 
