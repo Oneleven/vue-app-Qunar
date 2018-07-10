@@ -55,7 +55,7 @@
             display flex
             flex-wrap wrap 
         .icon
-            width 25vw
+            width 24vw
             height 1.65rem
             .icon-img 
                 // padding-bottom:0.12rem
