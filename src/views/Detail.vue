@@ -51,16 +51,16 @@ import axios from 'axios'
             }
         },
         mounted(){
-            this.lastlocation = this.$route.params.id
+            // this.lastlocation = this.$route.params.id
             this.getDetailInfo()
         },
-        activated(){
-            if( this.lastlocation !== this.$route.params.id ){
-                this.getDetailInfo()
-                this.lastlocation = this.$route.params.id
-                // this.lastlocation.push(this.$route.params.id)
-            }
-        }
+        // activated(){
+        //     if( this.lastlocation !== this.$route.params.id ){
+        //         this.getDetailInfo()
+        //         this.lastlocation = this.$route.params.id
+        //         // this.lastlocation.push(this.$route.params.id)
+        //     }
+        // }
     }
 </script>
 

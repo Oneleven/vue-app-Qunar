@@ -433,6 +433,23 @@
 
 27. 父组件在mounted中获取ajax数据请求后，传递给子组件。如果json数据是嵌套的，比如a.b.c ，那么在标签页加入一个判断`v-if="a.b"` , 只有在a.b存在的情况下再展示渲染页面。否则出错
 
+28. 异步按需加载组件
+
+    ```
+    import City from 'city/City'
+    export default new Router({
+        routes:[{
+            path:'/',
+            name:'Home',
+            component:City
+        }]
+    })
+    -------只需改成箭头函数即可实现异步按需加载
+    component:()=> import('city/City')
+    ```
+
+    
+
 
 
 
