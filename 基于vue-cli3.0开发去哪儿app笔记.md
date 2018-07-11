@@ -448,6 +448,14 @@
     component:()=> import('city/City')
     ```
 
+29. 项目完成打包后，页面显示空白页，可以更改vue.config.js
+
+    ```
+    module.exports = {
+        baseUrl:'./'
+    }
+    ```
+
     
 
 

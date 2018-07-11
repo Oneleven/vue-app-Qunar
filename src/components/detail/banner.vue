@@ -47,7 +47,7 @@ export default {
   methods:{
       handleScroll(){
           const top = document.documentElement.scrollTop
-          if(top > 0.1){
+          if(top > 1){
               this.opactiy = {opacity:top/160}
               this.showIcon = false
           }else{
